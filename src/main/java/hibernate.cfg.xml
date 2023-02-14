@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+	
+	<hibernate-configuration>
+	
+   <session-factory>
+       <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+       <property name="connection.url">jdbc:mysql://localhost:3306/hibernatedb</property>
+       <property name="connection.username">root</property>
+       <property name="connection.password">Cristiano7</property>
+       <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+       
+       <!-- for running every program first we want to do create then update   -->
+<!--           <property name="hbm2ddl.auto">create</property>  -->  
+       
+          <property name="hbm2ddl.auto">update</property>  <!--    for fetching data
+ -->   
+       
+       
+       <property name="show_sql">true</property>
+       
+        <mapping class="com.org.hibernateproject.com.Student"/>  <!-- here Student is the class name -->
+       
+       
+       
+        <mapping class="com.org.savingimageintodatabase.Address"/>
+        
+        <mapping class="com.org.fetchingdatafromdatabase.Student1"/> 
+        
+                
+        <mapping class="com.org.embeddableObject.Student2"/> 
+        
+        
+   </session-factory>
+
+
+</hibernate-configuration>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
